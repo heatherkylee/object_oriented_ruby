@@ -1,10 +1,4 @@
-module Transportationable
-  
-  def initialize
-    @speed = 0
-    @direction = 'north'
-  end
-
+module Performanceable
   def brake
     @speed = 0
   end
@@ -15,22 +9,26 @@ module Transportationable
 
   def turn(new_direction)
     @direction = new_direction
+  end 
+end
+
+class Vehicle
+  def initialize
+    @speed = 0
+    @direction = 'north'
   end
-  
 end
 
 class Car
-  
-  include Transportationable
+  include Performanceable
 
   def honk_horn
     puts "Beeeeeeep!"
   end
-
 end
 
 class Bike
-  include Transportationable
+  include Performanceable
 
   def ring_bell
     puts "Ring ring!"
