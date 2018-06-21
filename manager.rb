@@ -1,5 +1,5 @@
 module Actualize
-  class Manager < Employee  
+  class Manager < Actualize::Employee
     def initialize(input_options)
       super
       @employees = input_options[:employees]
