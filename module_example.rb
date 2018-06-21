@@ -19,7 +19,7 @@ class Vehicle
   end
 end
 
-class Car
+class Car < Vehicle
   include Performanceable
 
   def honk_horn
@@ -27,7 +27,7 @@ class Car
   end
 end
 
-class Bike
+class Bike < Vehicle
   include Performanceable
 
   def ring_bell
